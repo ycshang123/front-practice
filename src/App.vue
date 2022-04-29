@@ -1,32 +1,34 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <router-view />
+
+    <nav-bar v-if="isShowNav" />
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+import navBar from '@/components/navBar.vue'
+export default {
+  data() {
+    return {
+      isShowNav: true,
+      // 需要导航栏的路由数组
+      showMenuList: ['/', '/index', '/find', '/message', '/my']
+    }
+  },
+  components: {
+    navBar
+  },
+  watch: {
+    $route(to, from) {
+      if (this.showMenuList.includes(to.path)) {
+        this.isShowNav = true
+      } else {
+        this.isShowNav = false
+      }
     }
   }
 }
-</style>
+</script>
+
+<style lang="scss"></style>
