@@ -61,7 +61,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../style/virables.scss";
+@import '../style/virables.scss';
 .docker {
   position: absolute;
   bottom: 0;
@@ -69,9 +69,9 @@ export default {
   display: flex;
   box-sizing: border-box;
   width: 100%;
-  height: .49rem;
-  padding: 0 .18rem;
-  border-top: .01rem solid $content-bgColor;
+  height: 0.49rem;
+  padding: 0 0.18rem;
+  border-top: 0.01rem solid $content-bgColor;
   &__item {
     flex: 1;
     text-align: center;
@@ -80,8 +80,8 @@ export default {
       text-decoration: none;
     }
     .iconfont {
-      margin: .07rem 0 .02rem 0;
-      font-size: .18rem;
+      margin: 0.07rem 0 0.02rem 0;
+      font-size: 0.18rem;
     }
     .router-link-active {
       a {
@@ -90,8 +90,8 @@ export default {
     }
   }
   &__title {
-    font-size: .2rem;
-    transform: scale(.5, .5);
+    font-size: 0.2rem;
+    transform: scale(0.5, 0.5);
     transform-origin: center top;
   }
 }
